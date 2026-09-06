@@ -28,7 +28,7 @@ textLabel.TextScaled = true
 textLabel.Parent = gui
 
 task.wait(2)
-textLabel.Text = "ez con lon nanh hacker lon"
+textLabel.Text = "ez con lồn nanh nha hacker"
 
 local function flash()
     while gui.Parent do
