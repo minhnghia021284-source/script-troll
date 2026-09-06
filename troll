@@ -1,0 +1,50 @@
+local player = game.Players.LocalPlayer
+local CoreGui = game:GetService("CoreGui")
+local SoundService = game:GetService("SoundService")
+
+local sound = Instance.new("Sound")
+sound.SoundId = "rbxassetid://138186576"  -- Đã đổi thành âm thanh nổ
+sound.Volume = 3
+sound.Parent = SoundService
+sound:Play()
+
+local gui = Instance.new("ScreenGui")
+gui.Name = "steal an egg"
+gui.Parent = CoreGui
+gui.ResetOnSpawn = false
+
+local textLabel = Instance.new("TextLabel")
+textLabel.Size = UDim2.new(1, 0, 1, 0)
+textLabel.Position = UDim2.new(0, 0, 0, 0)
+textLabel.BackgroundTransparency = 1
+textLabel.Text = "your account got hacked in 2 days haha"
+textLabel.TextColor3 = Color3.fromRGB(255, 0, 0)
+textLabel.TextSize = 60
+textLabel.Font = Enum.Font.GothamBold
+textLabel.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+textLabel.TextStrokeTransparency = 0.3
+textLabel.TextWrapped = true
+textLabel.TextScaled = true
+textLabel.Parent = gui
+
+task.wait(2)
+textLabel.Text = "ez con lon nanh hacker lon"
+
+local function flash()
+    while gui.Parent do
+        textLabel.TextTransparency = 0.2
+        task.wait(0.15)
+        textLabel.TextTransparency = 0.8
+        task.wait(0.15)
+    end
+end
+task.spawn(flash)
+
+print("haha")
+task.wait(10)
+
+gui:Destroy()
+sound:Stop()
+sound:Destroy()
+game:Shutdown()
+print("...")
